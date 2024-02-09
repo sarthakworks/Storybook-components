@@ -1,7 +1,6 @@
 import skipToContent from './skipToContent.html';
 import ReactHtmlParser from 'react-html-parser';
-import '../styles/main.scss'
-import './skipToContent.scss'
+import '../../styles/main.scss'
 export default {
     title: 'Components/Core/skipToContent',
     parameters: { layout: 'fullscreen' },
