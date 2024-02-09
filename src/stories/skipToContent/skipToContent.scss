@@ -1,6 +1,18 @@
 .cmp-skipToContent {
     .skip-to-main-content-link {
-       background-color: red;
-       color: red;
+        position: absolute;
+        left: -9999px;
+        z-index: 999;
+        font-weight: 700;
+        padding: 0.5em 1em 0.75em 0.5em;
+        background-color: var(--button-background);
+        border-radius: 0 0 16px 16px;
+        color: var(--link);
+
+        &:focus {
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+        }
     }
 }
