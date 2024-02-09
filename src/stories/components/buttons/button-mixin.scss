@@ -1,0 +1,189 @@
+$btn-font-family: $font-family-default !default;
+$btn-background-color: $bg-color-srk-white !default;
+$btn-background-color-hover: auto !default;
+$btn-border-radius: 999px !default;
+$btn-font-size: 18px !default;
+$btn-line-height: 1.4 !default;
+$btn-padding: 12px 25px !default;
+$btn-border-width: 1px !default;
+$btn-transition-duration: 0.3s !default;
+$btn-transition-property: background-color, color, border-color !default;
+$btn-include-disabled-styles: true !default;
+$btn-opacity-disabled: 1 !default;
+$btn-include-focus-styles: true !default;
+$btn-outline-width-focus: 1px !default;
+$btn-outline-style-focus: dotted !default;
+$btn-outline-offset-focus: 1px !default;
+//$btn-min-height: rem(42px);
+$btn-letter-spacing: 0;
+$btn-align-item:center; 
+$btn-text-decoration:none !default;
+//$btn-text-transform : uppercase !default;
+@mixin cmp-button {
+    .cmp-button {
+        @content;
+    }
+}
+
+@mixin btn-block(
+    $transition-duration: $btn-transition-duration,
+    $transition-property: $btn-transition-property,
+    $border-width: $btn-border-width,
+    $cursor: pointer,
+    $font-family: $btn-font-family,
+    $font-size: $btn-font-size,
+    $line-height: $btn-line-height,
+    $padding: $btn-padding,
+    $text-decoration:$btn-text-decoration,
+    $text-align: center,
+    $vertical-align: middle,
+    $display: inline-block,
+    //$min-height: $btn-min-height,
+    $letter-spacing:$btn-letter-spacing,
+    $align-item:$btn-align-item,
+    $include-disabled-styles: $btn-include-disabled-styles
+) {
+    display: $display;
+    padding: $padding;
+    border: $border-width solid $font-color-srk-marine;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: $text-align;
+    letter-spacing: $letter-spacing;
+    transition-duration: $transition-duration;
+    user-select: none;
+    align-items:$btn-align-item;
+    vertical-align: $vertical-align;
+   //min-height: $min-height;
+    text-decoration: $text-decoration;
+
+    &:not(:disabled):not([aria-disabled='true']) {
+        cursor: $cursor;
+    }
+
+    @if not($transition-duration == null) {
+        transition-property: $transition-property;
+    }
+
+    @include hover {
+        text-decoration: none;
+    }
+
+    @include focus {
+        text-decoration: none;
+    }
+
+    @if $include-disabled-styles {
+        &:disabled,
+        &[aria-disabled='true'] {
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+    }
+}
+
+@mixin btn-style-modifier(
+    $background-color: $btn-background-color,
+    $background-color-hover: $btn-background-color-hover,
+    $color: auto,
+    $color-hover: auto,
+    $border-width: $btn-border-width,
+    $border-color: undefined,
+    $border-color-hover: undefined,
+    $border-radius: $btn-border-radius,
+    $opacity-disabled: $btn-opacity-disabled,
+    $include-disabled-styles: $btn-include-disabled-styles,
+    $background-color-disabled: undefined,
+    $border-color-disabled: undefined,
+    $color-disabled: undefined,
+    $include-focus-styles: $btn-include-focus-styles,
+    $outline-width-focus: $btn-outline-width-focus,
+    $outline-style-focus: $btn-outline-style-focus,
+    $outline-offset-focus: $btn-outline-offset-focus,
+    $line-height:undefined,
+    $padding:$btn-padding,
+    $align-item:$btn-align-item,
+    $letter-spacing:$btn-letter-spacing,
+    $text-decoration:$btn-text-decoration,
+    //$text-transform : $btn-text-transform
+) {
+    @if $border-color == undefined {
+        $border-color: $background-color;
+    }
+
+    @if $border-color-hover == undefined {
+        $border-color-hover: $background-color-hover;
+    }
+    @if $line-height == undefined {
+        $line-height: $btn-line-height;
+    }
+
+    $background-color-lightness: 0;
+    $background-color-hover-lightness: 0;
+
+    background-color: $background-color;
+    border-color: $border-color;
+    border-radius: $border-radius;
+    color: $color;
+    //text-transform: $text-transform;
+
+    @if not($border-width == $btn-border-width) {
+        border-width: $border-width;
+    }
+    @if not($text-decoration == $btn-text-decoration) {
+        text-decoration: $text-decoration;
+    }
+    @if not($line-height == $btn-line-height) {
+        line-height: $line-height;
+    }
+    @if not($padding == $btn-padding) {
+        padding: $padding;
+    }
+    @if not($align-item == $align-item) {
+        align-items: $align-item;
+    }
+    @if not($letter-spacing == $btn-letter-spacing) {
+        letter-spacing: $letter-spacing ;
+    }
+    &:hover {
+        background-color: $background-color-hover;
+        border-color: $border-color-hover;
+        color: $color-hover;
+    }
+
+    @if $include-focus-styles {
+        &:focus {
+            background-color: $background-color-hover;
+            outline: $outline-width-focus $outline-style-focus;
+            outline-offset: $outline-offset-focus;
+            color: $color-hover;
+        }
+    }
+
+    &:focus-visible {
+        outline: 2px solid $font-color-srk-midnight;
+    }
+
+    @if $background-color-disabled == undefined {
+        $background-color-disabled: $background-color;
+    }
+
+    @if $border-color-disabled == undefined {
+        $border-color-disabled: $background-color;
+    }
+
+    @if $color-disabled == undefined {
+        $color-disabled: $color;
+    }
+
+    @if $include-disabled-styles {
+        &:disabled,
+        &[aria-disabled='true'] {
+            background-color: $background-color-disabled;
+            border-color: $border-color-disabled;
+            color: $color-disabled;
+            opacity: $opacity-disabled;
+        }
+    }
+}

@@ -1,1 +1,168 @@
+@import 'button-mixin';
 
+.button {
+    @include cmp-button {
+       min-width: 80px;
+       width: auto;
+        @include media(small){
+            min-width: unset;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        @include media(medium){
+            min-width: 224px;
+            width: auto;
+        }
+        @include btn-block($display: inline-flex);
+    }
+
+    &.btn--primary {
+        @include cmp-button {
+            @include btn-style-modifier(
+                $background-color: $bg-color-srk-white,
+                $color: map-get($colors-srk-pb, srk-marine-800),
+                $background-color-hover: map-get($colors-srk-pb, srk-marine-800),
+                $color-hover: map-get($colors-srk-pb, srk-white),
+                $color-disabled: $font-color-srk-black,
+                $background-color-disabled: $bg-color-srk-wheat,
+                $border-color-disabled: $bg-color-srk-wheat,
+                $border-color-hover: map-get($colors-srk-pb, srk-marine-800),
+				$border-color: 1px solid map-get($colors-srk-pb, srk-marine-800)
+            );
+        }
+    }
+
+    &.btn--secondary {
+        @include cmp-button {
+            @include btn-style-modifier(
+                $background-color: $font-color-srk-marine,
+                $color: $font-color-srk-white,
+                $color-hover: $font-color-srk-white,
+                $border-color: none,
+                $border-color-hover: none,
+                $background-color-hover: #0064be,
+                $color-disabled: map-get($colors-srk-pb, srk-marine-600),
+                $border-color-disabled: map-get($colors-srk-pb, srk-marine-600)
+            );
+        }
+    }
+
+	&.btn--teritory {
+        @include cmp-button {
+            @include btn-style-modifier(
+                $background-color: $font-color-srk-marine,
+                $color: $font-color-srk-white,
+                $border-color: none,
+                $border-radius: none,
+                $border-color-hover: none,
+				$line-height:1.45,
+				$letter-spacing:0.5px,
+				$padding:12px 24px,
+                $color-disabled: map-get($colors-srk-pb, srk-marine-600),
+                $border-color-disabled: map-get($colors-srk-pb, srk-marine-600)
+            );
+        }
+    }
+
+	&.btn--fourth {
+        @include cmp-button {
+            @include btn-style-modifier(
+                $background-color: transparent,
+				$color: map-get($colors-srk-pb, srk-marine),
+                $line-height: 1.2,
+                $letter-spacing: 0.1px,
+				$text-decoration:underline
+            );
+        }
+	}
+
+	&.btn--download {
+        @include cmp-button {
+            @include btn-block($display: block);
+            min-width: 0px;
+            text-align: left;
+            @include btn-style-modifier(
+                $background-color: transparent,
+                $color: map-get($colors-srk-pb, srk-marine),
+                $padding: 16px 0px,
+                $line-height: 28px,
+                $border-radius: 0px,
+                $include-focus-styles: none,
+                $outline-width-focus: none,
+                $outline-style-focus: none,
+                $outline-offset-focus: none,
+                $border-width: 0 0 2px 0,
+                $border-color: map-get($colors-srk-pb, srk-background2)
+            );
+            &:hover {
+                $color: map-get($colors-srk-pb, srk-marine);
+                text-decoration: underline;
+                $border-width: 0 0 2px 0;
+                border-color: map-get($colors-srk-pb, srk-marine);
+            }
+        }
+        .cmp-button__text {
+             margin: 0;
+        }
+
+    }
+
+    &.btn--vertically-center-button-label {
+        @include cmp-button {
+            align-items: center;
+        }
+    }
+    &.btn--width-for-anchorlink {
+        display: flex;
+        @include cmp-button {
+            box-sizing: border-box;
+        }
+    }
+    &.btn--center {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    &.btn--align-right {
+        justify-content: flex-end;
+        display: flex;
+    }
+    &.btn--strong {
+        @include cmp-button {
+            font-family:$font-family-body-bold ;
+        }
+    }
+    &.btn--full-width {
+        width: 100%;
+        @include media(small) {
+            max-width: 350px;
+        }
+        @include cmp-button {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    &.btn--full-width-in-small-screen {
+        width: 100%;
+        @include media(small) {
+            width: fit-content;
+        }
+        @include cmp-button {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    &.btn--full-width-till-medium-screen {
+        width: 100%;
+        @include media(medium) {
+            width: fit-content;
+        }
+        @include cmp-button {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    .cmp-button__text{
+        margin: auto;
+    }
+}

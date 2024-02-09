@@ -1,0 +1,63 @@
+.background-splash-blue {
+    background-color: $bg-color-srk-splash-200;
+}
+.background-slate-grey {
+    background-color: $bg-color-srk-wheat;
+}
+.background-white {
+    background-color: $bg-color-srk-white;
+}
+.background-grey-white {
+    background-color: $bg-color-srk-wheat;
+    @include media(large) {
+        background-color: $bg-color-srk-white;
+    }
+}
+.background-milkshake {
+    background-color: $bg-color-srk-milkshake-200;
+}
+
+//Pink Bg Color
+.background-milkshake-300 {
+    background-color: $bg-color-srk-milkshake-300;
+}
+.background-bb {
+    background-color: map-get($colors-srk-pb, srk-blue-600);
+}
+.background-slate {
+    background-color: $bg-color-srk-wheat;
+}
+.unique-selling-points-bg {
+    position: relative;
+    background-color: $bg-color-srk-splash-200;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+
+    @include media(medium) {
+        background-color: transparent;
+        //background-image: url('#{$img-path}bg-unique-selling-points-tablet.png');
+    }
+
+    @include media(large) {
+        background-color: transparent;
+        //background-image: url('#{$img-path}bg-unique-selling-points-desktop.png');
+    }
+}
+.unique-selling-points-slatebg {
+    position: relative;
+    background-color: $bg-color-srk-wheat;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+
+    @include media(medium) {
+        background-color: transparent;
+        //background-image: url('#{$img-path}slatebg-unique-selling-points-tablet.png');
+    }
+
+    @include media(large) {
+        background-color: transparent;
+        //background-image: url('#{$img-path}slatebg-unique-selling-points-desktop.png');
+    }
+}

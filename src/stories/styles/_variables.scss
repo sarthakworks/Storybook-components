@@ -1,0 +1,136 @@
+//== Font
+//primary font families
+$font-family-default: 'DM Sans', Arial, Helvetica, sans-serif; //
+$font-family-bold: 'Arial, Helvetica, sans-serif';
+$font-family-semibold: 'Arial, Helvetica, sans-serif Bold';
+$font-family-regular: 'Arial, Helvetica, sans-serif';
+//secondary font families
+
+$font-family-body-bold: 'DM Sans Bold', Arial, Helvetica, sans-serif;
+$font-family-body-light: 'DM Sans Light', sans-serif;
+$font-family-body-medium: 'DM Sans Medium', sans-serif;
+$font-family-body-semibold: 'DM Sans SemiBold', sans-serif;
+$font-size: 18px;
+$font-height: 1.5;
+$font-style: normal;
+$font-style-italic: italic;
+
+//== Layout
+$gutter-padding: 14px;
+$header-height: var(--headerHeight, 200px);
+$header-mobile-height: var(--headerMobileHeight, 130px);
+$max-width: 1164px;
+$max-body-width: 1680px;
+$screen-xsmall: 475px;
+$screen-small: 767px;
+$screen-medium: 1024px;
+$screen-large: 1200px;
+
+//== Grid
+$max_col: 12;
+
+$colors-srk-pb : (
+    //Primary
+    "srk-marine": blue,
+    "srk-white": var(--white),
+    "srk-midnight": var(--bg-light-blue-border),
+
+    //Secondary
+    "srk-evening": var(--bg-light-blue-border),
+    "srk-sky": var(--link-visited),
+    "srk-splash": pink,
+    "srk-flair": pink,
+    "srk-milkshake": pink,
+    //State
+    "srk-red": var(--red),
+    //Neutral
+    "srk-black-opacity60": rgba(0, 0, 0, 0.9),
+    "srk-black": #000000,
+    //Extended
+    "srk-wheat": #d1d3d7,
+);
+
+//BACKGROUND COLORS
+$bg-color-srk-white: map-get($colors-srk-pb, srk-white);
+
+$bg-color-srk-splash-100: map-get($colors-srk-pb, srk-splash-100);
+$bg-color-srk-splash-200: map-get($colors-srk-pb, srk-splash-200);
+$bg-color-srk-splash-100: map-get($colors-srk-pb, srk-splash-100);
+
+$bg-color-srk-milkshake: map-get($colors-srk-pb, srk-milkshake);
+$bg-color-srk-milkshake-100: map-get($colors-srk-pb, srk-milkshake-100);
+$bg-color-srk-milkshake-200: map-get($colors-srk-pb, srk-milkshake-200);
+$bg-color-srk-milkshake-300: map-get($colors-srk-pb, srk-milkshake-300);
+
+$bg-color-srk-wheat: map-get($colors-srk-pb, srk-wheat);
+$bg-color-srk-evening: map-get($colors-srk-pb, srk-evening);
+$bg-color-srk-black-opacity60: map-get($colors-srk-pb, srk-black-opacity60);
+$bg-color-srk-evening-400: map-get($colors-srk-pb ,srk-evening-400);
+$bg-color-srk-input-default: map-get($colors-srk-pb ,srk-input-default);
+$bg-color-srk-evening-100: map-get($colors-srk-pb ,srk-evening-100);
+$bg-color-srk-evening-300: map-get($colors-srk-pb ,srk-evening-300);
+$bg-color-srk-sky-100: map-get($colors-srk-pb ,srk-sky-100);
+$bg-color-srk-grey: map-get($colors-srk-pb ,srk-background1);
+
+//FONT COLORS
+$font-color-srk-midnight: map-get($colors-srk-pb, srk-midnight);
+$font-color-srk-black: map-get($colors-srk-pb, srk-evening-900);
+$font-color-srk-blue: map-get($colors-srk-pb, srk-sky-600);
+$font-color-srk-marine: map-get($colors-srk-pb, srk-marine);
+$font-color-srk-white: map-get($colors-srk-pb, srk-white);
+$font-color-srk-hint: map-get($colors-srk-pb, srk-hint);
+$font-color-srk-red: map-get($colors-srk-pb, srk-red);
+$font-color-srk-green: map-get($colors-srk-pb, srk-green);
+$font-color-srk-splash: map-get($colors-srk-pb, srk-splash);
+$font-color-srk-skeleton: map-get($colors-srk-pb, srk-skeleton);
+$font-color-srk-flair: map-get($colors-srk-pb, srk-flair);
+$font-color-srk-slate-100: map-get($colors-srk-pb, srk-slate-100);
+$font-color-srk-wheat: map-get($colors-srk-pb, srk-wheat);
+$font-color-srk-input-default: map-get($colors-srk-pb, srk-input-default);
+$font-color-srk-hover-active: map-get($colors-srk-pb, srk-hover-active);
+$font-color-srk-black: map-get($colors-srk-pb, srk-black);
+$font-color-srk-article-shadow: map-get($colors-srk-pb, srk-article-shadow);
+$font-color-srk-evening-300: map-get($colors-srk-pb, srk-evening-300);
+$font-color-srk--green: map-get($colors-srk-pb, srk--green);
+$font-color-srk-disabled-text: map-get($colors-srk-pb, srk-disabled-text);
+$font-color-srk-evening-200: map-get($colors-srk-pb, srk-evening-200);
+$font-color-srk-gray40: map-get($colors-srk-pb, srk-gray40);
+$font-color-srk-dark-red: map-get($colors-srk-pb, srk-dark-red);
+$font-color-srk-light-red: map-get($colors-srk-pb, srk-light-red);
+$font-color-srk-gray31: map-get($colors-srk-pb, srk-gray31);
+$font-color-srk-mustard: map-get($colors-srk-pb, srk-mustard);
+$font-color-srk-golden-yellow: map-get($colors-srk-pb, srk-golden-yellow);
+$font-color-srk-dark-orange: map-get($colors-srk-pb, srk-dark-orange);
+$font-color-srk-bright-yellow: map-get($colors-srk-pb, srk-bright-yellow);
+$font-color-srk-pale-yellow: map-get($colors-srk-pb, srk-pale-yellow);
+$font-color-srk-burnt-orange: map-get($colors-srk-pb, srk-burnt-orange);
+$font-color-srk-dark-yellow: map-get($colors-srk-pb, srk-dark-yellow);
+$font-color-srk-deep-sky-blue: map-get($colors-srk-pb, srk-deep-sky-blue);
+$font-color-srk-light-gray: map-get($colors-srk-pb, srk-light-gray);
+$font-color-srk-amber: map-get($colors-srk-pb, srk-amber);
+$font-color-srk-deep-orange: map-get($colors-srk-pb, srk-deep-orange);
+$font-color-srk-charcoal-gray: map-get($colors-srk-pb, srk-charcoal-gray);
+$font-color-srk-light-white: map-get($colors-srk-pb, srk-light-white);
+$font-color-srk-pale-gray: map-get($colors-srk-pb, srk-pale-gray);
+$font-color-srk-background1: map-get($colors-srk-pb, srk-background1);
+$font-color-srk-slate: map-get($colors-srk-pb, srk-slate);
+$font-color-srk-evening-600: map-get($colors-srk-pb, srk-evening-600);
+
+
+
+//Box Shadow Color
+$color-box-shadow1: map-get($colors-srk-pb, srk-midexpress-opacity10);
+$color-box-shadow2: map-get($colors-srk-pb, srk-midexpress-opacity100);
+$color-box-shadow3: map-get($colors-srk-pb, srk-midexpress-opacity4);
+
+$srk-hover2: map-get($colors-srk-pb, srk-hover2);
+
+$srk-slate-300: map-get($colors-srk-pb, srk-slate-300);
+
+$border-radius1: 16px;
+$border-radius2: 8px;
+
+
+$font-path: '/resources/fonts/';
+$img-path: '/resources/images/';
+

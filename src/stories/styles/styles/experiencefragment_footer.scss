@@ -1,0 +1,15 @@
+footer.experiencefragment {
+    @media (prefers-color-scheme: dark) {
+        border-color: $bg-color-srk-milkshake-200;
+    }
+
+    .cmp-separator__horizontal-rule {
+        margin: 0;
+        border: 0;
+    }
+    .cmp-experiencefragment--footer {
+        max-width: $max-width--desktop;
+        margin: 0 auto;
+        float: none;
+    }
+}

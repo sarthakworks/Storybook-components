@@ -1,0 +1,118 @@
+/*
+ *  Copyright 2018 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+ 
+//== Colors
+//
+//## Gray and brand colors for use across theme.
+
+/***BREAKPOINTS***/
+//DESKTOP
+@use 'sass:math';
+$max-width--desktop: 1311px;
+$min-width--desktop: 1024px;
+$grid-width--desktop: 984px;
+$offset-spacing--desktop: 40px;
+$gutter-spacing--desktop: 24px;
+
+//TABLET
+$max-width--tablet: 1023px;
+$min-width--tablet: 768px;
+$grid-width--tablet: 728px;
+$offset-spacing--tablet: 40px;
+$gutter-spacing--tablet: 24px;
+
+//MOBILE
+$max-width--mobile: 767px;
+$min-width--mobile: 375px;
+$grid-width--mobile: 343px;
+$offset-spacing--mobile: 32px;
+$gutter-spacing--mobile: 15px;
+
+//DESKTOP WRAPPER STYLES
+@mixin desktopBreakpoint() {
+    @media (min-width: $min-width--desktop) {
+        @content;
+    }
+}
+
+@mixin tabletBreakpoint() {
+    @media (min-width: $min-width--tablet) and (max-width:$max-width--tablet) {
+        @content;
+    }
+}
+
+@mixin mobileBreakpoint() {
+    @media (min-width: $min-width--mobile) and (max-width:$max-width--mobile) {
+        @content;
+    }
+}
+
+@mixin defaultDesktopStyles() {
+    @include desktopBreakpoint {
+        max-width: $grid-width--desktop;
+        grid-gap: $gutter-spacing--desktop;
+        @content;
+    }
+}
+
+//TABLET WRAPPER STYLES
+@mixin defaultTabletStyles() {
+    @include tabletBreakpoint {
+        max-width: $grid-width--tablet;
+        gap: $gutter-spacing--tablet;
+        @content;
+    }
+}
+
+//MOBILE WRAPPER STYLES
+@mixin defaultMobileStyles() {
+    @include mobileBreakpoint {
+        max-width: $grid-width--mobile;
+        gap: $gutter-spacing--mobile;
+        @content;
+    }
+}
+
+/***FONT SIZE***/
+$srk-font-sizes: (
+    font-size--12px: 12px,
+    font-size--14px: 14px,
+    font-size--16px: 16px,
+    font-size--18px: 18px,
+    font-size--20px: 20px,
+    font-size--24px: 24px,
+    font-size--28px: 28px,
+    font-size--32px: 32px,
+    font-size--36px: 36px,
+    font-size--42px: 42px,
+    font-size--48px: 48px,
+    font-size--54px: 54px,
+    font-size--60px: 60px,
+    font-size--68px: 68px,
+    font-size--78px: 76px,
+    font-size--84px: 84px,
+    font-size--92px: 92px
+);
+
+/***FONT WEIGHT***/
+$srk-font-weights: (
+    font-weight--light: 300,
+    font-weight--normal: 400,
+    font-weight--semibold: 600,
+    font-weight--bold: 700,
+    font-weight--heavy: 900
+);
+
