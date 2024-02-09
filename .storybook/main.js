@@ -20,5 +20,18 @@ const config = {
     autodocs: "tag",
   },
   staticDirs: ["..\\public"],
+  webpackFinal: async (storybookWebpackConfig, { configType }) => {
+    // Create a new rule for HTML files
+    const htmlRule = {
+      test: /\.html$/,
+      use: 'html-loader',
+    };
+
+    // Add the new rule to the webpack config
+    storybookWebpackConfig.module.rules.push(htmlRule);
+
+    return storybookWebpackConfig;
+  },
 };
+
 export default config;
