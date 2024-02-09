@@ -2,6 +2,7 @@
   "name": "storybook-components",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/sarthakworks/storybook-components",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -10,15 +11,16 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
+  },"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "storybook": "storybook dev -p 6006",
+  "build-storybook": "storybook build", 
+  "predeploy": "npm run build-storybook",
+  "deploy-storybook": "gh-pages -d storybook-static"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -47,6 +49,7 @@
     "@storybook/react": "^7.6.13",
     "@storybook/react-webpack5": "^7.6.13",
     "@storybook/test": "^7.6.13",
+    "gh-pages": "^6.1.1",
     "prop-types": "^15.8.1",
     "storybook": "^7.6.13",
     "webpack": "^5.90.1"
