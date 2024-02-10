@@ -138,7 +138,7 @@ header {
 
 //scroll stop on hover
 
-html:has(.TopnavDesktop:hover) {
+html:has(.TopnavDesktop .topnav-D-L2 li:hover) {
   box-sizing: border-box;
   overflow: hidden;
   main,
