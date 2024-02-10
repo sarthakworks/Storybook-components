@@ -4,8 +4,8 @@ header {
       height: 61px;
       position: relative;
       z-index: 11;
-      background-color: #5a287d;
-      border-bottom: 1px solid #5a287d;
+      background-color: var(--top-nav-bg);
+      border-bottom: 1px solid var(--link);
       .iah__container {
         width: auto;
         padding: 0;
@@ -13,8 +13,44 @@ header {
         margin-left: auto;
         .iah__l2__main-links {
           position: relative;
+          .iah__login {
+            position: absolute;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-left: 19px;
+            margin-right: 19px;
+            padding-top: 0;
+            font-size: 14px;
+            .iah__login-link {
+              display: block;
+              background: transparent url(../../assets/Login-white.svg)
+                no-repeat 13px;
+              height: 100%;
+              border-radius: 16px;
+              color: var(--top-nav-text);
+              font-size: 1.4rem;
+              text-decoration: none;
+              line-height: 30px;
+              padding: 0;
+              background-repeat: no-repeat;
+              padding-top: 31px;
+              background-position: center 13px;
+              outline: 0;
+            }
+
+            &:after {
+              content: "";
+              width: 2px;
+              height: 37px;
+              position: absolute;
+              background-color: var(--link);
+              right: -19px;
+              top: 12px;
+            }
+          }
+
           .iah__logo {
-            background-color: #5a287d;
+            background-color: var(--top-nav-bg);
             float: none;
             margin: 0 auto;
             text-align: center;
@@ -47,7 +83,7 @@ header {
             font-family: "RNHouseSansRegular", sans-serif;
             font-size: 16px;
             line-height: 20px;
-            color: #fff;
+            color: var(--top-nav-text);
             margin-right: 0;
             font-size: 14px;
             line-height: 30px;
