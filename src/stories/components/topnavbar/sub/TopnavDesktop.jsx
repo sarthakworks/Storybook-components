@@ -1,6 +1,6 @@
 import React from "react";
 import ThemeSwitcher from "../../themeSwitcher/ThemeSwitcher";
-
+import logo from "../../../assets/logo.svg";
 export default function TopnavDesktop() {
   return (
     <nav className="TopnavDesktop">
@@ -58,6 +58,9 @@ export default function TopnavDesktop() {
           <div className="L2-left">
             <nav aria-label="Main Navigation">
               <ul>
+                <li>
+                  <img height="48px" src={logo} alt="company logo" />
+                </li>
                 <li aria-current="true">
                   <a href="#" data-navid="personal" aria-current="page">
                     <span>Products</span>
