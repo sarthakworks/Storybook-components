@@ -1,6 +1,6 @@
 header {
   .TopnavDesktop {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 30px;
     color: var(--top-nav-text);
     .topnav-D-L1,
@@ -50,9 +50,7 @@ header {
               height: 100%;
               display: flex;
               align-items: center;
-              &.active {
-                background-color: var(--base);
-              }
+              font-weight: normal;
               a {
                 letter-spacing: 0;
                 text-decoration: none;
@@ -86,10 +84,29 @@ header {
           display: flex;
         }
       }
+      .L1-container ul li.active {
+        background-color: var(--base);
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+      .L2-container ul li.active {
+        border-bottom: 2px solid var(--link);
+        margin-top: -2px;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .L3-container ul li.active {
+        border-bottom: 2px solid var(--link);
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
     }
-
+    .topnav-D-L2 {
+      background-color: var(--base);
+    }
     .topnav-D-L3 {
       position: absolute;
+      pointer-events: none;
       top: 48px;
       width: 100%;
       left: 0;
@@ -99,7 +116,22 @@ header {
 
     .topnav-D-L2 li:hover .topnav-D-L3 {
       display: block;
+      pointer-events: auto;
       opacity: 1;
     }
+  }
+  .Overlay {
+    display: none;
+  }
+  &:has(.topnav-D-L2 li:hover) .Overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 0;
+    z-index: -10000;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 11;
   }
 }

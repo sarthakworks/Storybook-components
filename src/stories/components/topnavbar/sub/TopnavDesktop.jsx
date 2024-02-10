@@ -61,7 +61,7 @@ export default function TopnavDesktop() {
                 <li>
                   <img height="48px" src={logo} alt="company logo" />
                 </li>
-                <li aria-current="true">
+                <li class="active" aria-current="true">
                   <a href="#" data-navid="personal" aria-current="page">
                     <span>Products</span>
                   </a>
@@ -166,6 +166,7 @@ export default function TopnavDesktop() {
           </div>
         </div>
       </div>
+      <div className="Overlay">Overlay</div>
     </nav>
   );
 }
