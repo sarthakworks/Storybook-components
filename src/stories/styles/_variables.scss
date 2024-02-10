@@ -1,15 +1,15 @@
 //== Font
 //primary font families
-$font-family-default: 'DM Sans', Arial, Helvetica, sans-serif; //
-$font-family-bold: 'Arial, Helvetica, sans-serif';
-$font-family-semibold: 'Arial, Helvetica, sans-serif Bold';
-$font-family-regular: 'Arial, Helvetica, sans-serif';
+$font-family-default: sans-serif;
+$font-family-bold: " sans-serif";
+$font-family-semibold: "sans-serif Bold";
+$font-family-regular: "sans-serif";
 //secondary font families
 
-$font-family-body-bold: 'DM Sans Bold', Arial, Helvetica, sans-serif;
-$font-family-body-light: 'DM Sans Light', sans-serif;
-$font-family-body-medium: 'DM Sans Medium', sans-serif;
-$font-family-body-semibold: 'DM Sans SemiBold', sans-serif;
+$font-family-body-bold: "sans-serif Bold";
+$font-family-body-light: "sans-serif";
+$font-family-body-medium: "sans-serif ";
+$font-family-body-semibold: "sans-serif Bold";
 $font-size: 18px;
 $font-height: 1.5;
 $font-style: normal;
@@ -29,25 +29,24 @@ $screen-large: 1200px;
 //== Grid
 $max_col: 12;
 
-$colors-srk-pb : (
-    //Primary
-    "srk-marine": blue,
-    "srk-white": var(--white),
-    "srk-midnight": var(--bg-light-blue-border),
-
-    //Secondary
-    "srk-evening": var(--bg-light-blue-border),
-    "srk-sky": var(--link-visited),
-    "srk-splash": pink,
-    "srk-flair": pink,
-    "srk-milkshake": pink,
-    //State
-    "srk-red": var(--red),
-    //Neutral
-    "srk-black-opacity60": rgba(0, 0, 0, 0.9),
-    "srk-black": #000000,
-    //Extended
-    "srk-wheat": #d1d3d7,
+$colors-srk-pb: (
+  //Primary
+  "srk-marine": hsl(224, 21%, 12%),
+  "srk-white": var(--white),
+  "srk-midnight": hsl(224, 21%, 12%),
+  //Secondary
+  "srk-evening": hsl(224, 21%, 12%),
+  "srk-sky": hsl(224, 21%, 12%),
+  "srk-splash": pink,
+  "srk-flair": pink,
+  "srk-milkshake": pink,
+  //State
+  "srk-red": var(--red),
+  //Neutral
+  "srk-black-opacity60": rgba(0, 0, 0, 0.9),
+  "srk-black": #000000,
+  //Extended
+  "srk-wheat": #d1d3d7
 );
 
 //BACKGROUND COLORS
@@ -65,12 +64,12 @@ $bg-color-srk-milkshake-300: map-get($colors-srk-pb, srk-milkshake-300);
 $bg-color-srk-wheat: map-get($colors-srk-pb, srk-wheat);
 $bg-color-srk-evening: map-get($colors-srk-pb, srk-evening);
 $bg-color-srk-black-opacity60: map-get($colors-srk-pb, srk-black-opacity60);
-$bg-color-srk-evening-400: map-get($colors-srk-pb ,srk-evening-400);
-$bg-color-srk-input-default: map-get($colors-srk-pb ,srk-input-default);
-$bg-color-srk-evening-100: map-get($colors-srk-pb ,srk-evening-100);
-$bg-color-srk-evening-300: map-get($colors-srk-pb ,srk-evening-300);
-$bg-color-srk-sky-100: map-get($colors-srk-pb ,srk-sky-100);
-$bg-color-srk-grey: map-get($colors-srk-pb ,srk-background1);
+$bg-color-srk-evening-400: map-get($colors-srk-pb, srk-evening-400);
+$bg-color-srk-input-default: map-get($colors-srk-pb, srk-input-default);
+$bg-color-srk-evening-100: map-get($colors-srk-pb, srk-evening-100);
+$bg-color-srk-evening-300: map-get($colors-srk-pb, srk-evening-300);
+$bg-color-srk-sky-100: map-get($colors-srk-pb, srk-sky-100);
+$bg-color-srk-grey: map-get($colors-srk-pb, srk-background1);
 
 //FONT COLORS
 $font-color-srk-midnight: map-get($colors-srk-pb, srk-midnight);
@@ -116,8 +115,6 @@ $font-color-srk-background1: map-get($colors-srk-pb, srk-background1);
 $font-color-srk-slate: map-get($colors-srk-pb, srk-slate);
 $font-color-srk-evening-600: map-get($colors-srk-pb, srk-evening-600);
 
-
-
 //Box Shadow Color
 $color-box-shadow1: map-get($colors-srk-pb, srk-midexpress-opacity10);
 $color-box-shadow2: map-get($colors-srk-pb, srk-midexpress-opacity100);
@@ -130,7 +127,5 @@ $srk-slate-300: map-get($colors-srk-pb, srk-slate-300);
 $border-radius1: 16px;
 $border-radius2: 8px;
 
-
-$font-path: '/resources/fonts/';
-$img-path: '/resources/images/';
-
+$font-path: "/resources/fonts/";
+$img-path: "/resources/images/";
