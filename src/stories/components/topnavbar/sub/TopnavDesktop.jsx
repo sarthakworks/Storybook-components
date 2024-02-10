@@ -12,7 +12,7 @@ export default function TopnavDesktop() {
           <div className="L1-left">
             <nav aria-label="Main Navigation">
               <ul>
-                <li class="active" aria-current="true">
+                <li className="active" aria-current="true">
                   <a href="#" data-navid="personal" aria-current="page">
                     <span>Personal</span>
                   </a>
@@ -46,9 +46,9 @@ export default function TopnavDesktop() {
                 <ThemeSwitcher />
               </li>
               <li>
-                <div class="button btn--primary">
-                  <button class="cmp-button" type="button">
-                    <span class="cmp-button__text">Login</span>
+                <div className="button btn--primary">
+                  <button className="cmp-button" type="button">
+                    <span className="cmp-button__text">Login</span>
                   </button>
                 </div>
               </li>
@@ -64,7 +64,7 @@ export default function TopnavDesktop() {
                 <li>
                   <img height="48px" src={logo} alt="company logo" />
                 </li>
-                <li class="active" aria-current="true">
+                <li className="active" aria-current="true">
                   <a href="#" data-navid="personal" aria-current="page">
                     <span>Products</span>
                   </a>
@@ -81,7 +81,7 @@ export default function TopnavDesktop() {
                       <div className="L3-left">
                         <nav aria-label="Main Navigation">
                           <ul>
-                            <li class="active" aria-current="true">
+                            <li className="active" aria-current="true">
                               <a
                                 href="#"
                                 data-navid="personal"
@@ -118,20 +118,21 @@ export default function TopnavDesktop() {
             <ul>
               <li>
                 <svg
-                  class="feather feather-search"
+                  className="feather feather-search"
                   fill="none"
-                  height="24"
+                  height={24}
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
                   viewBox="0 0 24 24"
-                  width="24"
+                  width={24}
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <circle cx="11" cy="11" r="8" />
-                  <line x1="21" x2="16.65" y1="21" y2="16.65" />
+                  <circle cx={11} cy={11} r={8} />
+                  <line x1={21} x2="16.65" y1={21} y2="16.65" />
                 </svg>
+
                 <input type="search" aria-label="Search" placeholder="Search" />
               </li>
             </ul>

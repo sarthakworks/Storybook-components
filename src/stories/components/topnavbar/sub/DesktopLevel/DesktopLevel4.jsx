@@ -7,11 +7,7 @@ export default function DesktopLevel4() {
         <ul>
           <li>
             <ol>
-              <a
-                href="javascript:void(0)"
-                class="iah__l4-column-title"
-                tabindex="-1"
-              >
+              <a href="#" className="iah__l4-column-title" tabIndex="-1">
                 Mortgages
               </a>
               {[
@@ -35,11 +31,7 @@ export default function DesktopLevel4() {
           </li>
           <li>
             <ol>
-              <a
-                href="javascript:void(0)"
-                class="iah__l4-column-title"
-                tabindex="-1"
-              >
+              <a href="#" className="iah__l4-column-title" tabIndex="-1">
                 Mortgages
               </a>
               {[
@@ -63,11 +55,7 @@ export default function DesktopLevel4() {
           </li>
           <li>
             <ol>
-              <a
-                href="javascript:void(0)"
-                class="iah__l4-column-title"
-                tabindex="-1"
-              >
+              <a href="#" className="iah__l4-column-title" tabIndex="-1">
                 Mortgages
               </a>
               {[
