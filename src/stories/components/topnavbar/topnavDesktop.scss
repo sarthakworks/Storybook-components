@@ -18,6 +18,18 @@ header {
         margin: 0 auto;
         padding: 0 20px;
         height: 100%;
+        .feather-search {
+          position: absolute;
+          padding: 0;
+          margin: 4px 4px 4px 10px;
+        }
+        input {
+          font-size: 1.5rem;
+          line-height: 1.45;
+          padding: 5px 5px 5px 46px;
+          width: 100%;
+          border-radius: 6px;
+        }
 
         .L1-left,
         .L1-right,
