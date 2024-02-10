@@ -1,6 +1,9 @@
 import React from "react";
 import ThemeSwitcher from "../../themeSwitcher/ThemeSwitcher";
 import logo from "../../../assets/logo.svg";
+import DesktopLevel4 from "./DesktopLevel/DesktopLevel4";
+import DesktopLevel3 from "./DesktopLevel/DesktopLevel3";
+
 export default function TopnavDesktop() {
   return (
     <nav className="TopnavDesktop">
@@ -65,130 +68,9 @@ export default function TopnavDesktop() {
                   <a href="#" data-navid="personal" aria-current="page">
                     <span>Products</span>
                   </a>
-                  <div className="topnav-D-L3">
-                    <div className="L3-container">
-                      <div className="L3-left">
-                        <nav aria-label="Main Navigation">
-                          <ul>
-                            <li class="active" aria-current="true">
-                              <a
-                                href="#"
-                                data-navid="personal"
-                                aria-current="page"
-                              >
-                                <span>Mortgages</span>
-                              </a>
-                              <div className="topnav-D-L4">
-                                <div className="L4-container">
-                                  <ul>
-                                    <li>
-                                      <ol>
-                                        <a
-                                          href="javascript:void(0)"
-                                          class="iah__l4-column-title"
-                                          tabindex="-1"
-                                        >
-                                          Mortgages
-                                        </a>
-                                        {[
-                                          "See our mortgage options",
-                                          "First time buyer mortgage",
-                                          "Moving home",
-                                          "Remortgage to NatWest",
-                                          "Buy to let mortgage",
-                                          "Mortgage calculators",
-                                          "Get an Agreement in Principle",
-                                          "Continue your Agreement in Principle",
-                                          "How to apply",
-                                        ].map((text, index) => (
-                                          <li key={index}>
-                                            <a href="#" data-navid="text">
-                                              <span>{text}</span>
-                                            </a>
-                                          </li>
-                                        ))}
-                                      </ol>
-                                    </li>
-                                    <li>
-                                      <ol>
-                                        <a
-                                          href="javascript:void(0)"
-                                          class="iah__l4-column-title"
-                                          tabindex="-1"
-                                        >
-                                          Mortgages
-                                        </a>
-                                        {[
-                                          "See our mortgage options",
-                                          "First time buyer mortgage",
-                                          "Moving home",
-                                          "Remortgage to NatWest",
-                                          "Buy to let mortgage",
-                                          "Mortgage calculators",
-                                          "Get an Agreement in Principle",
-                                          "Continue your Agreement in Principle",
-                                          "How to apply",
-                                        ].map((text, index) => (
-                                          <li key={index}>
-                                            <a href="#" data-navid="text">
-                                              <span>{text}</span>
-                                            </a>
-                                          </li>
-                                        ))}
-                                      </ol>
-                                    </li>
-                                    <li>
-                                      <ol>
-                                        <a
-                                          href="javascript:void(0)"
-                                          class="iah__l4-column-title"
-                                          tabindex="-1"
-                                        >
-                                          Mortgages
-                                        </a>
-                                        {[
-                                          "See our mortgage options",
-                                          "First time buyer mortgage",
-                                          "Moving home",
-                                          "Remortgage to NatWest",
-                                          "Buy to let mortgage",
-                                          "Mortgage calculators",
-                                          "Get an Agreement in Principle",
-                                          "Continue your Agreement in Principle",
-                                          "How to apply",
-                                        ].map((text, index) => (
-                                          <li key={index}>
-                                            <a href="#" data-navid="text">
-                                              <span>{text}</span>
-                                            </a>
-                                          </li>
-                                        ))}
-                                      </ol>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <a href="#" data-navid="premier">
-                                <span>Credit Cards</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" data-navid="business">
-                                <span>Insurance</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                      </div>
-                      <div className="L3-right">
-                        <ul>
-                          <li></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+                  <DesktopLevel3>
+                    <DesktopLevel4 />
+                  </DesktopLevel3>
                 </li>
                 <li>
                   <a href="#" data-navid="premier">
